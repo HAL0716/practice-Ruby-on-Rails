@@ -8,4 +8,8 @@
   <li> 更新日：<%= @user.updated_at %> </li>
 </ul>
 
+<div>
+  <%= button_to "修正", { action: "edit" }, method: :get %>
+</div>
+
 <%= link_to '一覧', users_path %>
