@@ -8,4 +8,9 @@
   <li> 更新日：<%= @user.updated_at %> </li>
 </ul>
 
+<div>
+  <%= button_to "修正", { action: "edit" }, method: :get %>
+  <%= button_to "削除", "/users/#{@user.id}", method: :delete %>
+</div>
+
 <%= link_to '一覧', users_path %>
