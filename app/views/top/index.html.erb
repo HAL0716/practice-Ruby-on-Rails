@@ -1,2 +1,12 @@
 <h1>Top#index</h1>
 <p>Find me in app/views/top/index.html.erb</p>
+<div>
+  私の名前は，<%= @name %>です．
+</div>
+<div>
+  <% if @age < 18 %>
+    未成年です．
+  <% else %>
+    成人しています．
+  <% end %>
+</div>
