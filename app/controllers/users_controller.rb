@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(name: params[:user][:name], age: params[:user][:age])
+    @user = User.new(user_params)
 
     if @user.save
       redirect_to @user
@@ -20,4 +20,9 @@ class UsersController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
+  private
+    def user_params
+      params.require(:user).permit(:name, :age)
+    end
 end
